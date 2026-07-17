@@ -1,0 +1,39 @@
+{
+  "name": "@erp-assistant/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "pnpm --filter @erp-assistant/contracts build",
+    "dev": "nest start --watch",
+    "prebuild": "pnpm --filter @erp-assistant/contracts build",
+    "build": "nest build",
+    "prestart": "pnpm --filter @erp-assistant/contracts build",
+    "start": "node dist/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "latest",
+    "@ai-sdk/openai": "latest",
+    "@erp-assistant/contracts": "workspace:*",
+    "@nestjs/common": "latest",
+    "@nestjs/core": "latest",
+    "@nestjs/platform-express": "latest",
+    "ai": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "reflect-metadata": "latest",
+    "rxjs": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "latest",
+    "@nestjs/testing": "latest",
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "@types/supertest": "latest",
+    "supertest": "latest",
+    "vitest": "latest"
+  }
+}
